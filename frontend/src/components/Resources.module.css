@@ -1,0 +1,40 @@
+.resources {
+  text-align: center;
+}
+
+.resources-title {
+  font-size: 20px;
+  color: #5d647f;
+}
+
+.resources-wrapper {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resources-description {
+  font-size: 14px;
+  color: #5d647f;
+}
+
+.resources-list {
+  align-self: flex-start;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.resources-list > li {
+  padding: 5px;
+  font-size: 14px;
+  color: #ff4f19;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.resources-image {
+  width: 150px;
+  height: 150px;
+}

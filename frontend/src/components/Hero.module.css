@@ -1,0 +1,28 @@
+.hero {
+  height: 100%;
+}
+
+.hero-title {
+  padding: 0 15px;
+  color: #5d647f;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-images {
+}
+
+.hero-description {
+  font-size: 14px;
+  color: #5d647f;
+  text-align: center;
+}
