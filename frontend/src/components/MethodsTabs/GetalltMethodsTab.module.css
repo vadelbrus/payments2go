@@ -1,0 +1,26 @@
+.methods-demoTitle,
+.methods-outputTitle {
+  font-size: 12px;
+  text-align: left;
+}
+
+.methods-fetchText {
+  font-size: 10px;
+  color: rgba(255, 79, 25, 0.7);
+  font-weight: 600;
+}
+
+.methods-outputText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  padding: 5px;
+  color: #fcf9f4;
+  overflow-y: scroll;
+  background-color: rgba(29, 62, 100, 0.55);
+}
+
+code {
+  font-size: 10px;
+}

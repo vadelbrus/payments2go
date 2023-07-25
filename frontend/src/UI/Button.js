@@ -1,12 +1,45 @@
-import classes from "./Button.module.css";
-
-const Button = ({ title, type, isActive }) => {
-  const buttonClasses = isActive
-    ? `${classes["action-button"]} ${classes["active"]} `
-    : classes["action-button"];
+const Button = ({
+  title,
+  action,
+  type,
+  onClickHandler,
+  handleMouseEnter,
+  handleMouseLeave,
+  padding,
+  border,
+  color,
+  bgColor,
+  children,
+  height,
+  width,
+  fontWeight,
+  fontSize,
+  cursor,
+  transition,
+}) => {
   return (
-    <button className={buttonClasses} type={type}>
-      {title}
+    <button
+      onClick={onClickHandler}
+      title={title}
+      action={action}
+      type={type}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        padding,
+        border,
+        color,
+        backgroundColor: bgColor,
+        children,
+        height,
+        width,
+        fontWeight,
+        fontSize,
+        cursor,
+        transition,
+      }}
+    >
+      {children}
     </button>
   );
 };

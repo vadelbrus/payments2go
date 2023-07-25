@@ -22,6 +22,7 @@
 .resources-list {
   align-self: flex-start;
   padding: 0;
+  margin: 0;
   list-style: none;
   text-align: left;
 }

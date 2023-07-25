@@ -1,21 +1,7 @@
-.action-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 50px;
-  font-size: 12px;
-  color: #5d647f;
-  align-self: flex-start;
-  padding: 8px;
-  font-weight: 500;
-  text-transform: uppercase;
-  background-color: #f1f4f1;
-  /* border: none; */
-  border: 1px solid #ff4f19;
-  cursor: pointer;
+.active {
+  background-color: rgba(255, 79, 25, 0.7);
 }
 
-.action-button.active {
-  background-color: rgba(255, 79, 25, 0.7);
+.action-button:hover {
+  background-color: rgba(255, 79, 25, 0.6);
 }

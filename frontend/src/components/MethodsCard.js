@@ -1,50 +1,36 @@
+import { useState } from "react";
+import Tabs from "./Actions/Tabs";
 import Wrapper from "../UI/Wrapper";
 import Card from "../UI/Card";
-import Button from "../UI/Button";
+// import TabsList from "./Actions/TabsList";
+// import Button from "../UI/Button";
+import GetMethodsTab from "../components/MethodsTabs/GetMethodsTab";
+import GetalltMethodsTab from "../components/MethodsTabs/GetallMethodsTab";
+import CreateMethodsTab from "../components/MethodsTabs/CreateMethodsTab";
+import PatchMethodsTab from "../components/MethodsTabs/PatchMethodsTab";
+import DeleteMethodsTab from "../components/MethodsTabs/DeleteMethodsTab";
 import classes from "./MethodsCard.module.css";
 
 const MethodsCard = (props) => {
-  const fetchText = `fetch('https://payments2go.com/payments/1')
-  .then(res=>res.json()) .then(json=>console.log(json))`;
+  const [tabState, setTabState] = useState(1);
 
-  const outputText = `{
-    id:1, title:'...', 
-price:'...', 
-category:'...', 
-description:'...', 
-image:'...' 
-}`;
+  const toggleTab = (index) => {
+    setTabState(index);
+  };
 
   return (
     <Wrapper>
       <h1 className={classes["methods-title"]}>Supported Http Methods</h1>
       <Card>
         <div className={classes["methods-container"]}>
-          <ul className={classes["list"]}>
-            <li>
-              <Button title={"GET"} type="button" isActive={true} />
-            </li>
-            <li>
-              <Button title={"GETALL"} type="button" isActive={false} />
-            </li>
-            <li>
-              <Button title={"CREATE"} type="button" isActive={false} />
-            </li>
-            <li>
-              <Button title={"PATCH"} type="button" isActive={false} />
-            </li>
-            <li>
-              <Button title={"DELETE"} type="button" isActive={false} />
-            </li>
-          </ul>
-          <div>
-            <div>
-              <p>Get one payment</p>
-              <pre>{fetchText}</pre>
-            </div>
-            <div>
-              <pre>{outputText}</pre>
-            </div>
+          {/* <TabsList /> */}
+          <Tabs onTabChange={toggleTab} activeTab={tabState} />
+          <div className={classes["methods-demoWrapper"]}>
+            {tabState === 1 && <GetMethodsTab />}
+            {tabState === 2 && <GetalltMethodsTab />}
+            {tabState === 3 && <CreateMethodsTab />}
+            {tabState === 4 && <PatchMethodsTab />}
+            {tabState === 5 && <DeleteMethodsTab />}
           </div>
         </div>
       </Card>

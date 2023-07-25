@@ -1,0 +1,23 @@
+.board-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: rgba(93, 100, 127, 1);
+}
+
+.board-actions {
+  display: flex;
+  flex-wrap: wrap;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+}
+
+.board-output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  padding: 5px;
+  color: #fcf9f4;
+  background-color: rgba(29, 62, 100, 0.55);
+}
